@@ -21,7 +21,11 @@
     <Listener className='org.apache.catalina.core.JasperListener'/>
 
     <Service name='Catalina'>
-        <Connector port='${http.port}' bindOnInit="false"/>
+        <Connector 
+			port='${http.port}' 
+			bindOnInit="false"
+			compressableMimeType="text/html,text/xml,text/plain,application/json,application/javascript"
+			compression="on"/>
 
         <Engine defaultHost='localhost' name='Catalina'>
 
